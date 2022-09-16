@@ -39,7 +39,7 @@ const pickRandom = (array, items) => {
 
   return randomPicks;
 };
-
+/*generating the game by adding the cards element each with its specific emogi*/
 const generateGame = () => {
   const dimensions = selectors.board.getAttribute("data-dimension");
 
@@ -81,7 +81,7 @@ const startGame = () => {
     selectors.timer.innerText = `time: ${state.totalTime} sec`;
   }, 1000);
 };
-
+/* making card to its initial condition if it dies not match his same*/
 const flipBackCards = () => {
   document.querySelectorAll(".card:not(.matched)").forEach((card) => {
     card.classList.remove("flipped");
@@ -97,7 +97,7 @@ const flipCard = (card) => {
   if (!state.gameStarted) {
     startGame();
   }
-
+/* enabling the flip action when state(matching card) is not occured*/
   if (state.flippedCards <= 2) {
     card.classList.add("flipped");
   }
@@ -131,7 +131,7 @@ const flipCard = (card) => {
     }, 1000);
   }
 };
-
+/*fixing cards when matching*/
 const attachEventListeners = () => {
   document.addEventListener("click", (event) => {
     const eventTarget = event.target;
