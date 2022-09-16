@@ -47,7 +47,7 @@ const generateGame = () => {
     throw new Error("The dimension of the board must be an even number.");
   }
 
-  const emojis = ["🥔", "🍒", "🥑"];
+  const emojis = ["&#128043", " &#128167","&#9749"];
   const picks = pickRandom(emojis, (dimensions * dimensions) / 6);
   const items = shuffle([...picks, ...picks]);
   const cards = `
