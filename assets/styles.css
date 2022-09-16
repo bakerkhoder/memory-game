@@ -113,3 +113,15 @@ button {
     transform: rotateY(180deg) rotateZ(50deg);
 }
 
+.win-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21pt;
+    color: #282A3A;
+}
+
+.highlight {
+    color: #6f00fc;
+}
